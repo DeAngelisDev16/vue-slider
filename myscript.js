@@ -36,6 +36,25 @@
                   
             }
     
+        },
+        
+        
+        methods: {
+            slideNext(){ //activeIndex ++;
+                this.activeIndex++;
+                if(this.activeIndex >= this.slides.length){
+                    this.activeIndex = 0;
+                }
+
+            },
+
+            slideBefore(){// activeIndex --;
+                this.activeIndex--;
+                if(this.activeIndex < 0){
+                    this.activeIndex = 4;
+                }
+
+            }
         }
     }) .mount('#app')
     
